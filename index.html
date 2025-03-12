@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Name Generator - Discover Your Cultural Identity</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Apple SF Fonts through Apple CDN -->
+    <link rel="stylesheet" href="https://applesocial.s3.amazonaws.com/assets/styles/fonts.css">
+    <!-- Google Fonts for Chinese characters -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-decoration">
+            <div class="chinese-pattern left"></div>
+            <div class="chinese-pattern right"></div>
+        </div>
+        
+        <header>
+            <!-- App Logo and Title -->
+            <div class="app-identity">
+                <div class="logo-container">
+                    <div class="logo"></div>
+                </div>
+                <div class="title-container">
+                    <h1 class="app-title">Chinese Name Generator</h1>
+                    <p class="app-subtitle">中文名生成器</p>
+                </div>
+            </div>
+            
+            <h2 class="tagline">Discover Your <span class="highlight">Cultural Identity</span></h2>
+            <p class="description">Uncover a meaningful Chinese name inspired by your English name and rooted in Chinese cultural traditions.</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="english-name">Enter Your English Name <span class="chinese-label">输入英文名</span></label>
+                    <div class="input-wrapper">
+                        <input type="text" id="english-name" placeholder="e.g., John, Emma..." required>
+                        <button id="generate-btn" class="primary-btn">Generate <span class="chinese-btn-text">生成</span></button>
+                    </div>
+                </div>
+                
+                <!-- Animated Loading Indicator -->
+                <div class="loading" id="loading">
+                    <div class="loading-animation">
+                        <div class="ink-drop"></div>
+                    </div>
+                    <p class="loading-text">Creating your perfect Chinese name<span class="dot-animation">...</span></p>
+                </div>
+            </section>
+
+            <!-- Results Display Section -->
+            <section class="results-section" id="results-section">
+                <h2 class="results-title">Your Chinese Names <span class="chinese-subtitle">为你精选的中文名</span></h2>
+                <p class="instruction">Below are three unique Chinese names inspired by your English name, each with cultural significance and meaning.</p>
+                
+                <div class="names-container" id="names-container">
+                    <!-- Results will be dynamically added here via JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- Footer with cultural elements -->
+            <div class="footer-decoration"></div>
+            <div class="footer-content">
+                <p>© 2025 Chinese Name Generator | Powered by DeepSeek-R1 AI</p>
+                <p class="disclaimer">This tool is for reference and entertainment. Generated names may benefit from review by a Chinese language expert.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Name Card Template -->
+    <template id="name-card-template">
+        <div class="name-card">
+            <div class="name-card-inner">
+                <div class="name-header">
+                    <div class="name-seal"></div>
+                    <h3 class="chinese-name"></h3>
+                    <p class="pinyin"></p>
+                </div>
+                <div class="name-content">
+                    <div class="meaning-section">
+                        <h4><i class="fa-solid fa-book"></i> Chinese Meaning <span class="chinese-heading">中文含义</span></h4>
+                        <p class="chinese-meaning"></p>
+                    </div>
+                    <div class="meaning-section">
+                        <h4><i class="fa-solid fa-language"></i> English Explanation <span class="chinese-heading">英文解释</span></h4>
+                        <p class="english-meaning"></p>
+                    </div>
+                    <div class="cultural-note">
+                        <h4><i class="fa-solid fa-landmark"></i> Cultural Background <span class="chinese-heading">文化背景</span></h4>
+                        <p class="culture"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
